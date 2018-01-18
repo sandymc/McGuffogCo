@@ -1,0 +1,20 @@
+{% include header.html %}
+<section>
+  <!-- Content -->
+  <h1 id="content">{{ page.title }}</h1>
+  <!-- NOTE. IT'S really important that the last block gets terminated by $ for all rows on a by-resolution
+  basis. Otherwise, even if the widths add up to 12, odd things happen.
+  So, e.g., if at a reolution you have 4u 4u 4u, it must be 4u 4u 4u$
+  at another resolution, 6u 6u must be 6u 6u$
+  -->
+  <div class="row">
+    <div class="3u 4u(small) 12u$(xsmall)">
+      <p>{{ page.date | date_to_long_string }}</p>
+    </div>
+    <div class="9u$ 8u$(small) 12u$(xsmall)">
+      {{ content }}
+    </div>
+  </div>
+  </section>
+{% include footer.html %}
+{% include sidebar.html %}

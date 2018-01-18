@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<!--
+  McGuffog&Company website, modified from the original Editorial theme by Editorial by HTML5 UP
+	Content (c) McGuffog&Company, design (c) the original creators
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<!-- SEO tags -->
+		<title>{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+		<meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
+		<link rel="canonical" href="{{ page.url | prepend: site.url }}">
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="{{ site.baseurl }}/assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ie8.css" /><![endif]-->
+
+		<!-- Flavicon code : https://realfavicongenerator.net -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="{{ site.baseurl }}/index.html" class="logo"><strong>McGuffog&amp;Company</strong> Software</a>
+									<!--
+									<ul class="icons">
+										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
+									</ul>
+								-->
+								</header>
+
+								{% if page.url == "/index.html" or page.url == "/" %}
+									<!-- Banner -->
+										<section id="banner">
+											<div class="content">
+												<header>
+													<h1>McGuffog&amp;Company</h1>
+													<p>Software for Desktop and Mobile</p>
+												</header>
+												<p>Robust software backed by fast, professional support since 2007.</p>
+												<!--
+												<ul class="actions">
+													<li><a href="#" class="button big">Learn More</a></li>
+												</ul>
+											-->
+											</div>
+											<span class="image">
+												<img src="{{ site.baseurl }}/assets/images/Desktop.jpg" alt="" />
+											</span>
+										</section>
+								{% else %}
+								{% endif %}

@@ -1,0 +1,61 @@
+---
+title: Blog
+description: McGuffog&Company software - robust, professional software for desktop and mobile
+layout: default
+---
+<h1>Blog</h1>
+<!-- This loops through the paginated posts -->
+
+
+  {% for post in paginator.posts %}
+  <section>
+    <!-- Content -->
+    <h1 id="content">{{ post.title }}</h1>
+    <!-- NOTE. IT'S really important that the last block gets terminated by $ for all rows on a by-resolution
+    basis. Otherwise, even if the widths add up to 12, odd things happen.
+    So, e.g., if at a reolution you have 4u 4u 4u, it must be 4u 4u 4u$
+    at another resolution, 6u 6u must be 6u 6u$
+    -->
+    <div class="row">
+      <div class="3u 4u(small) 12u$(xsmall)">
+        <p>{{ post.date | date_to_long_string }}</p>
+      </div>
+      <div class="9u$ 8u$(small) 12u$(xsmall)">
+        {{ post.excerpt }}  <a href="{{ post.url }}">Read more...</a>
+      </div>
+    </div>
+    </section>
+  {% endfor %}
+
+
+
+<!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
+<div class="row">
+	<div class="12u$ align-center">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+    {% else %}
+      <span>&laquo; Prev</span>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <em>{{ page }}</em>
+      {% elsif page == 1 %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+      {% else %}
+        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+    {% else %}
+      <span>Next &raquo;</span>
+    {% endif %}
+	</div>
+</div>
+{% endif %}
+
+<p>&nbsp</p>
