@@ -51,3 +51,101 @@ support: https://mcguffogco.freshdesk.com/solution/categories/8000043393
 <p>In AccuRaw EXR and AccuRaw Monochrome, highlight recovery is enabled when "Preserve Highlights" is enabled.</p>
 <p><strong>Note:</strong> Highlight recovery and the "Luma Artifact Suppression" control interact significantly. Generally, set "Luma Artifact Suppression" to its minimum to maximize the effect of highlight recovery.</p>
 
+<a name="user-manual"></a>
+<h3><strong>User Manual</strong></h3>
+
+<p>Using both AccuRaw and AccuRaw Monochrome is very similar.</p>
+
+<h3>The Windows</h3>
+<p>There are two key windows:</p>
+<ol>
+  <li>The browser window, which presents a list of images. Note that the browser window can only browse folders that you have explicitly opened, or sub-folders of folders that you explicitly opened via the "open dialog". To go to a new folder, click the Folder icon in the top left corner of the window.</li>
+  <li>The develop window, which allows you to view and manipulate a single image. AccuRaw allows you to have multiple develop windows open at the same time, subject to available memory. You open a new develop window by clicking an image in the browser, or by opening an image from the File menu.</li>
+</ol>
+<p>In addition, there are subsidiary windows to display EXIF information, to manage camera profiles, and to manage presets.</p>
+
+<h3>Adjusting Images In The Develop Window</h3>
+<ul>
+  <li>To zoom in and out, use the ⌘+ and ⌘- keys, or use the View menu.</li>
+  <li>To zoom to a specific zoom ratio, use ⌘F to fit the image in the window, or ⌘1, ⌘2, ⌘3 or ⌘4 for 100%, 200%, 300% or 400% zoom ratios.</li>
+  <li>To pan the image, click, hold and drag or use a two-finger scroll on a trackpad.</li>
+  <li>Sliders can be adjusted with the cursor or the stepper controls. Also, when you're in a text box, you can use the arrow keys, shift arrow keys and page up/page down keys to change control values.</li>
+  <li>To reset a slider to its default value, double-click the text above it.</li>
+</ul>
+
+<h3>How to Crop Images</h3>
+<p>You can crop images by simply selecting crop mode, and dragging the corners of the crop area.</p>
+
+<h3>The Demosaicing Controls</h3>
+<p>AccuRaw provides fine-grained control over the parameters of the demosaicing process (these controls are disabled for cameras without Color Filter Array or Bayer filters):</p>
+<ul>
+  <li><strong>Artifact Suppression.</strong> This control provides continuous control over the trade-off between resolution in the Luminance domain, and the suppression of artifacts such as moiré. Having these controls set to zero maximizes resolution, but may result in artifacts being visible, especially in images with sharp transitions, or specular highlights. Having these controls set to maximum minimizes artifacts, but results in some loss of resolution or smearing of the image.</li>
+  <li><strong>Post-demosaic filter.</strong> AccuRaw also provides an adjustable post-demosaic filter. This can be useful in optimizing image quality for some cameras.</li>
+</ul>
+<p><strong>Note:</strong> In order to see the effect of the demosaicing controls, you must be at a 100% zoom factor or more.</p>
+
+<h3>Using Camera Calibration Profiles</h3>
+<p>AccuRaw uses the industry standard DCP (DNG Camera Profile) format camera calibration profiles. These can be produced by software such as Adobe's DNG Profile Editor, various X-Rite software packages, etc.</p>
+<p>In order to use a camera profile, it must first be imported via the Profile Manager (on the File → Manage Camera Profiles... menu).</p>
+<p>Note that AccuRaw will allow you to use any profile with any camera. Note also that AccuRaw uses only the calibration information in the camera profiles. "Look tables" to create specific color rendering — e.g., "Vivid" — are ignored.</p>
+
+<h3>The Processing Options</h3>
+<p>AccuRaw allows you to explicitly decide on processing:</p>
+<ul>
+  <li><strong>Scene Referred.</strong> Raw images are usually processed with a tone curve that mimics human vision. However this default can be overridden by deselecting "Scene Referred".</li>
+  <li><strong>Preserve Highlights.</strong> Raw images are usually processed such that "whites remain white". This can be overridden by deselecting "Preserve Highlights".</li>
+  <li><strong>Sensor CFA Removed (AccuRaw Monochrome only).</strong> If your sensor has been modified, e.g., by the removal of a CFA, such that the same light hits all pixel locations, tick the "Sensor CFA removed" box.</li>
+  <li><strong>Sensor IR/UV Modified (AccuRaw Monochrome only).</strong> If your sensor has been modified in such a way that the spectral sensitivity of the sensor has been changed overall, e.g., by removal of the IR filter, or by the addition of an IR only filter, tick the "Sensor IR/UV modified" box.</li>
+</ul>
+
+<h3>Using Presets</h3>
+<p>Presets are an important part of AccuRaw:</p>
+<ul>
+  <li>To create a preset, click "New Preset" in the develop window. You can then choose which of the current image settings to use as part of the preset.</li>
+  <li>In order to manage presets, go to the File → Manage Presets... menu.</li>
+</ul>
+
+<h3>Exporting</h3>
+<p>AccuRaw allows you to export in JPEG, TIFF or DNG format. JPEG images are exported in the sRGB color space, while TIFF and DNG images use ProPhoto.</p>
+
+<h3>Batch Operations</h3>
+<p>You can batch process images from the Browser Window:</p>
+<ul>
+  <li>Select the location for the processed files in the drop down menu.</li>
+  <li>Select all the images you want to process in the browser window. Use shift-click or cmd-click to select multiple files.</li>
+  <li>Click the action menu on the bottom left of the Browser window, and select the preset to use in the processing.</li>
+</ul>
+<p>You can set AccuRaw to either overwrite existing files with the same name as batch processed files, or to create new names in AccuRaw → Preferences. New names are formed by adding "_n" to the existing name, e.g., "photo.nef" will be exported as "photo_1.jpg" if "photo.jpg" already exists.</p>
+
+<h3>Integration with Other Applications</h3>
+<p>AccuRaw will work together with other apps as an external editor. For more information, see the section on App Integration below.</p>
+
+
+<a name="app-integration"></a>
+<h3><strong>App Integration</strong></h3>
+
+<p>AccuRaw and AccuRaw Monochrome can be used as an external editor for Adobe applications such as Lightroom, Apple's Aperture, and other apps that support "external editor" functionality. When you choose to edit an image from one of those apps using AccuRaw as an external editor, the app will render a TIFF or JPEG from the raw file and send it to AccuRaw. AccuRaw will then search for the corresponding raw file, open the raw file, and then overwrite the JPEG/TIFF from the calling program with AccuRaw's rendition of the raw image. Depending on the app, the AccuRaw rendition will appear in Lightroom/Aperture/etc as an "alternate master", "version" or similar.</p>
+
+<h3>External Editor Setup</h3>
+<p>To use AccuRaw as an external editor for Lightroom, Aperture, etc, follow these steps:</p>
+<ol>
+  <li>In AccuRaw, go to Preferences, and select the "App Integration" tab. Then set the location of your raw files. AccuRaw will search subdirectories of this location, but will not be able to search outside of the directory you set. <strong>Note:</strong> if the raw file location is not set, AccuRaw will not be able to find the raw file corresponding to the file sent to it by Lightroom/Aperture/etc. If you have multiple versions of AccuRaw installed, you must do this for each version individually.</li>
+  <li>In Lightroom or Aperture, go to the Preferences dialog and activate the "External Editing" preferences tab.</li>
+  <li>Select the version of AccuRaw that you have installed as the external editor. If you have multiple versions installed — e.g., both AccuRaw and AccuRaw Monochrome, or beta versions — you must set each version separately.</li>
+  <li>Select an intermediate file format. AccuRaw supports both TIFF and JPEG, but we strongly recommend 16-bit TIFF using ProPhoto for the color space. Using JPEG or sRGB may result in banding or colors at the extremes of your camera's color gamut being desaturated.</li>
+  <li>Set a file naming scheme. AccuRaw supports the default naming schemes of both Lightroom and Aperture. However, if you have a different application or chose to change the default setting, make sure that the naming scheme follows one of the patterns listed below. If it does not, AccuRaw will not be able to locate the original raw file corresponding to the file passed to it.</li>
+  <li>Open the file you want to process within Lightroom, Aperture, etc, and open it for external editing in whichever version of AccuRaw you have installed. Make adjustments in AccuRaw as usual.</li>
+  <li>When you are done with adjustments in AccuRaw, transfer the image back to the original app with the "Update Edited Image" button, under the "App Integration" section of the adjustments pane. Some applications — e.g., Aperture — may require you to quit AccuRaw before the new image shows in the original application. <strong>Note:</strong> it may take several seconds for the new image to appear.</li>
+</ol>
+
+<h3>Intermediate JPEG/TIFF Name Format</h3>
+<p>For the intermediate JPEG or TIFF, you must configure Lightroom/Aperture/etc to use one of the following naming schemes so that AccuRaw can locate the raw file:</p>
+<ul>
+  <li><code>&lt;FileName&gt;</code> where &lt;FileName&gt; is the raw file name, e.g., "DSC_0049.TIF"</li>
+  <li><code>&lt;FileName&gt;-Edit-&lt;Digits&gt;</code> where &lt;Digits&gt; is a sequence of digits, e.g., "DSC_0049-Edit-1.TIF"</li>
+  <li><code>&lt;FileName&gt;-&lt;Digits&gt;</code> e.g., "DSC_0049-1.TIF"</li>
+  <li><code>&lt;FileName&gt;_v&lt;Digits&gt;</code> e.g., "DSC_0049_v1.TIF"</li>
+  <li><code>&lt;FileName&gt; &lt;Digits&gt;</code> e.g., "DSC_0049 1.TIF"</li>
+  <li><code>&lt;FileName&gt;-&lt;suffix&gt;</code> where suffix can be anything but FileName cannot contain any hyphens.</li>
+</ul>
+
