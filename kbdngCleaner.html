@@ -70,7 +70,7 @@ support: https://mcguffogco.freshdesk.com/solution/categories/8000043393
 
 <p><strong>Why does this work?</strong> This works because whenever DNG Converter converts an image that needs lens correction, it embeds the required correction as an "opcode" into the DNG image. Lens correction opcodes as usually things like "WarpRectilinear". DNG Cleaner knows where to find these opcodes, and simply removes them, as long as you have the "Remove opcodes" checkbox selected.</p>
 
-		<span class="image main"><img src="{{ site.baseurl }}/assets/images/dngCleaner1.jpg" alt="" /></span>
+		<span class="image main"><img src="{{ site.baseurl }}/assets/images/dngCleaner1.jpeg" alt="" /></span>
 
 <p>Note that in order for this to work, you need DNG converter to be using it's default settings. Specifically, Compatibility should be set to the most recent version of Camera Raw. You should definitely not be using Custom Settings with the "Linear" checkbox selected. "Linear", otherwise known as LinearRaw, bakes any corrections into the actual data in the DNG, making it impossible to remove.</p>
 
