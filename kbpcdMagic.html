@@ -18,19 +18,20 @@ support: https://mcguffogco.freshdesk.com/solution/categories/8000043393
 
 
 <a name="where-can-i-find-more-information-on-photo-cd"></a>
-<h2>Where can I find more information on Photo CD?</h2>
+<h3><strong>FAQs</strong></h3>
+<h3>Where can I find more information on Photo CD?</h3>
 
 <p>There are still some documents on the Kodak site, but the most comprehensive site that I know of is <a href="http://www.tedfelix.com/PhotoCD/index.html">Ted Felix's site</a>. Ted's site also has links to a lot of other useful sites.</p>
 
 
 <a name="is-there-a-completely-free-way-to-convert-pcd-images"></a>
-<h2>Is there a completely free way to convert PCD images?</h2>
+<h3>Is there a completely free way to convert PCD images?</h3>
 
 <p>Yes, there is <a href="http://pcdtojpeg.sourceforge.net/">pcdtojpeg</a>. pcdtojpeg runs on Windows, OS X and Linux, and uses the same decoder library as pcdMagic, and is open source GPL software. However, it's a command line program, and lacks several of the more advanced features of pcdMagic. There's a comparison of features <a href="https://sites.google.com/site/pcdmagicwindows/ProductMatrix">here</a>.</p>
 
 
 <a name="is-pcdmagic-color-managed"></a>
-<h2>Is pcdMagic color managed?</h2>
+<h3>Is pcdMagic color managed?</h3>
 
 <p>Yes, both the OS X and Windows versions of pcdMagic are fully color managed:</p>
 <ul>
@@ -40,37 +41,37 @@ support: https://mcguffogco.freshdesk.com/solution/categories/8000043393
 
 
 <a name="why-are-exported-jpeg-images-in-the-srgb-color-space-rather-than-something-wider-like-adobe-rgb"></a>
-<h2>Why are exported JPEG images in the sRGB color space rather than something wider like Adobe RGB?</h2>
+<h3>Why are exported JPEG images in the sRGB color space rather than something wider like Adobe RGB?</h3>
 
 <p>sRGB covers the entire normal PCD gamut, so if you have not extensively post processed the image (e.g., increased color saturation) there's no loss of color information, and sRGB images have the best chance of displaying correctly on non-color managed systems. If you have extensively post-processed the image in pcdMagic, you should select the TIFF export option rather than JPEG. The TIFF option uses the ProPhoto color space.</p>
 
 
 <a name="why-are-the-color-profiles-required-i-thought-that-the-pcd-scanning-process-automatically-adjusted-color"></a>
-<h2>Why are the color profiles required - I thought that the PCD scanning process automatically adjusted color?</h2>
+<h3>Why are the color profiles required - I thought that the PCD scanning process automatically adjusted color?</h3>
 
 <p>As originally envisaged by Kodak, the PCD scanning process (and specifically the SBA or Scene Balance Algorithm) adjusted the scan parameters to get an optimal image, color rendering to a single standard, and adjusting exposure, contrast, etc. In practice, there are a number of problems. Firstly, the SBA required that film type be correctly identified. However, even if the film type was correctly identified, SBA's white balance algorithm was relatively easily fooled, and was often disabled. In addition, over the life of the Photo CD format, at least two different generations of scanners were used, and several versions of SBA were used, with different results. You can check the SBA status for each individual image in the metadata information that pcdMagic prints out. As a result, in order to get optimum color rendering, film and scanner specific profiles are required. Kodak eventually release six profiles (Kodachrome, other reversal and negative film stock for each of 4000-series and 2000-series scanners)</p>
 
 
 <a name="why-do-i-sometimes-get-better-color-by-manually-selecting-a-color-profile"></a>
-<h2>Why do I sometimes get better color by manually selecting a color profile?</h2>
+<h3>Why do I sometimes get better color by manually selecting a color profile?</h3>
 
 <p>Color profiles are normally automatically selected by pcdMagic, based on the film and scanner information as recorded in the image metadata. However, the Kodak scanners required careful setting up to give optimal performance, and to detect film type correctly. Unfortunately, in many labs this didn't happen. As a result, pcdMagic also allows for color profiles to be set manually.</p>
 
 
 <a name="can-i-use-kodak-color-profiles-ive-never-been-able-to-use-them-with-any-other-software"></a>
-<h2>Can I use Kodak Color profiles - I've never been able to use them with any other software?</h2>
+<h3>Can I use Kodak Color profiles - I've never been able to use them with any other software?</h3>
 
 <p>pcdMagic for the Mac does offer the ability to use the original Kodak profiles. It's not however available with the Windows version. However, pcdMagic's internal profiles are for practical purposed indistinguishable from the the original Kodak profiles.</p>
 
 
 <a name="is-there-a-difference-between-the-kodak-color-profiles-and-pcdmagics-internal-profiles"></a>
-<h2>Is there a difference between the Kodak color profiles and pcdMagic's internal profiles?</h2>
+<h3>Is there a difference between the Kodak color profiles and pcdMagic's internal profiles?</h3>
 
 <p>Yes, there is a technical difference - pcdMagic's internal profiles are RGB profiles, designed to emulate the original Kodak YCC profiles. This is both for reasons of copyright, and because RGB profiles give slightly faster image load times. However, in our tests there is no visible difference between the internal and Kodak profiles.</p>
 
 
 <a name="other-image-conversion-solutions-including-most-commercial-software-blow-highlights-get-the-colors-wrong-or-only-convert-at-low-resolution"></a>
-<h2>Other image conversion solutions, including most commercial software, blow highlights, get the colors wrong, or only convert at low resolution. What's so difficult about PCD files?</h2>
+<h3>Other image conversion solutions, including most commercial software, blow highlights, get the colors wrong, or only convert at low resolution. What's so difficult about PCD files?</h3>
 
 <p>The PCD format was developed in the early 1990's, when many of the color standards that we take for granted today didn't exist. In addition, the format was designed in such a way that it could display on the TV's of the day with very cheap and simple hardware. The most notable "gotcha's" are:</p>
 <ul>
@@ -82,31 +83,32 @@ support: https://mcguffogco.freshdesk.com/solution/categories/8000043393
 
 
 <a name="the-color-of-exported-images-are-wrong-dont-match-the-pcdmagic-screen"></a>
-<h2>The color of exported images are wrong/don't match the pcdMagic screen</h2>
+<h3>The color of exported images are wrong/don't match the pcdMagic screen</h3>
 
 <p>You have to use a color managed image viewer and have a calibrated display with correctly configured color management software to get the correct colors. Safari on the Mac is color managed, as is Firefox on PCs. But note that you have to manually enable color management on Firefox. Most good quality dedicated image viewers are color managed, but you should check your specific software.</p>
 
 
 <a name="i-cant-open-the-info-pcd-file"></a>
-<h2>I can't open the INFO.PCD file</h2>
+<h3>I can't open the INFO.PCD file</h3>
 
 <p>Photo CD's contain a "INFO.PCD" file in their root directory. However, the INFO.PCD file isn't actually an image file - it contains thumbnails and data on all of the image files on the CD. The actual image files are in the "IMAGES" subdirectory of the CD. pcdMagic doesn't use the INFO.PCD file, and will give error messages if you try to open the file.</p>
 
 
 <a name="program-xxxx-wont-open-an-exported-dng-file"></a>
-<h2>Program XXXX won't open an exported DNG file</h2>
+<h3>Program XXXX won't open an exported DNG file</h3>
 
 <p>Many image processing packages have only partial DNG support, usually only for camera generated (Bayer mosaic) images. PCD images are RGB, not mosaiced, and so pcdMagic generates so-called "linear DNGs". All recent Adobe products (e.g., PhotoShop, ACR, Lightroom) will read these correctly, but you should check with the publishers of any other software for compatibility.</p>
 
 
 <a name="windows-keeps-on-telling-me-that-has-prevented-pcdmagic-for-windows-from-running"></a>
-<h2>Windows keeps on telling me that has prevented pcdMagic for Windows from running?</h2>
+<h3><strong>Troubleshooting</strong></h3>
+<h3>Windows keeps on telling me that has prevented pcdMagic for Windows from running?</h3>
 
 <p>By default, Windows "SmartScreen" technology will prevent any program it doesn't recognize from running. Just click on "More Info" in the dialog that Windows 8 displays, and then click "Run Anyway". Note that you might have to do this for both the "setup.exe" program in the installer, and pcdMagic once it's installed.</p>
 
 
 <a name="whats-this-drag-and-drop-thing-youre-talking-about"></a>
-<h2>What's this "drag-and-drop" thing you're talking about?</h2>
+<h3>What's this "drag-and-drop" thing you're talking about?</h3>
 
 <p>Drag-and-drop is easy. Just:</p>
 <ul>
@@ -117,31 +119,31 @@ support: https://mcguffogco.freshdesk.com/solution/categories/8000043393
 
 
 <a name="when-i-try-to-install-i-get-an-error-message-about-missing-files"></a>
-<h2>When I try to install, I get an error message about missing files?</h2>
+<h3>When I try to install, I get an error message about missing files?</h3>
 
 <p>Before installing pcdMagic for Windows, you must extract all the files in the pcdMagic for Windows Zip file to your hard drive. If you don't do this, setup will fail.</p>
 
 
 <a name="when-i-try-to-update-pcdmagic-i-get-an-error-message-about-you-cannot-start-application-pcdmagic-for-windows-from-this-location"></a>
-<h2>When I try to update pcdMagic, I get an error message about 'You cannot start application pcdMagic for Windows from this location because it is already installed from a different location'?</h2>
+<h3>When I try to update pcdMagic, I get an error message about 'You cannot start application pcdMagic for Windows from this location because it is already installed from a different location'?</h3>
 
 <p>If you get this error message, uninstall the old version of pcdMagic (via the Control Panel) before trying to install the newer version.</p>
 
 
 <a name="when-i-drag-and-drop-files-for-conversion-i-get-an-error-message-about-file-permissions"></a>
-<h2>When I drag and drop files for conversion, I get an error message about file permissions?</h2>
+<h3>When I drag and drop files for conversion, I get an error message about file permissions?</h3>
 
 <p>Before conversion, you have to copy the PCD image files (and for 64Base images, the entire CD directory structure) to a hard drive. You can't drag-and-drop files directly from a CD-ROM.</p>
 
 
 <a name="the-application-is-missing-required-files-error-message-when-installing"></a>
-<h2>"The application is missing required files" error message when installing</h2>
+<h3>"The application is missing required files" error message when installing</h3>
 
 <p>In order to install pcdMagic for Windows, the ZIP file must have been extracted to a location on the disk.<br>
 To do that, first use the "Extract" command in file manager, then double click on the extracted .exe file. Double clicking on the zip file in file manager and then double clicking on the exe file in the resulting window will not work.</p>
 
 <a name="user-manual-for-v1-2-and-later"></a>
-<h2>User manual for V1.2 and later</h2>
+<h3><strong>User manual for V1.2 and later</strong></h3>
 
 <p>This page describes the V1.2 and later versions of pcdMagic. For earlier versions, see <a href="#user-manual-for-v1-1-and-earlier">the manual for version 1.1</a></p>
 
@@ -199,7 +201,7 @@ To do that, first use the "Extract" command in file manager, then double click o
 
 
 <a name="application-integration"></a>
-<h2>Application integration</h2>
+<h3><strong>Application integration</strong></h3>
 
 <p>pcdMagic can be used as an external editor for Adobe applications such as Lightroom, Apple's Aperture, and other apps that support "external editor" functionality. When you choose to edit an image from one of those apps using pcdMagic as an external editor, the app will render a TIFF or JPEG from the Photo CD file and send it to pcdMagic. pcdMagic will then search for the corresponding Photo CD file, open the Photo CD file, and then overwrite the JPEG/TIFF from the calling program with pcdMagic's rendition of the Photo CD image. Depending on the app, the pcdMagic rendition will appear in Lightroom/Aperture/etc as an "alternate master", "version" or similar.</p>
 
@@ -229,7 +231,7 @@ To do that, first use the "Extract" command in file manager, then double click o
 
 
 <a name="64base-image-files"></a>
-<h2>64Base image files</h2>
+<h3>64Base image files</h3>
 
 <p>64Base images consist of multiple files - a base image, and a set of image extension files.</p>
 
@@ -254,7 +256,7 @@ To do that, first use the "Extract" command in file manager, then double click o
 
 
 <a name="user-manual-for-v1-1-and-earlier"></a>
-<h2>User Manual for V1.1 and earlier</h2>
+<h3>User Manual for V1.1 and earlier</h3>
 
 <p>This page describes version 1.1 of pcdMagic for OS X. For the latest version, see <a href="#user-manual-for-v1-2-and-later">the main manual page</a>.</p>
 
@@ -382,4 +384,128 @@ To do that, first use the "Extract" command in file manager, then double click o
   <li><strong>Disable Frame Buffer (FBO)</strong>. Normally pcdMagic uses openGL, and specifically the Frame Buffer capabilities of the installed graphics adapter, to speed up zoom and pan operations in the develop module. However, some graphics adapters have bugs in their drivers that can result in application crashes or corrupted displays. In these cases, you can disable FBO operations - pcdMagic will fall back to a slower but safer display modes.</li>
 </ol>
 
+<a name="quickstart"></a>
+<h3>Quickstart</h3>
 
+<p>Using pcdMagic is easy - all you have to do is either to:</p>
+<ul>
+  <li>Drag and drop image files onto the pcdMagic window, or</li>
+  <li>Double-click image files in Windows Explorer.</li>
+</ul>
+
+<p>Immediately on opening the file, pcdMagic saves a converted version of the file to the same location as the original file. You don't even have to save the file. It's that easy!</p>
+
+<p>You can also use pcdMagic for Windows in more advanced ways - see the other articles on this site.</p>
+
+
+<a name="main-window"></a>
+<h3>Main window</h3>
+
+<p>On startup, pcdMagic displays its main window:</p>
+
+<!-- [Main window screenshot was here] -->
+
+<p>The window consists of two sections:</p>
+<ul>
+  <li>The options area on the left hand side of the window, used to select options. Generally, you won't need to change any of these. pcdMagic automatically selects the best options for each image based on the image metadata, which gives pcdMagic a variety of data on the image, such as the type of film originally used, and details of the scanner. This part of the screen remain the same for all pcdMagic operations.</li>
+  <li>The image area on right hand side of the window. Once you have dragged and dropped an image onto the pcdMagic window, the image is displayed here. The area is also used to display information on batch conversions, image properties, etc.</li>
+</ul>
+
+<p><strong>Hint:</strong> You can make the options area bigger or smaller by dragging the divider between the two area, even reducing the option area to nothing.</p>
+
+<h3>Setting the options</h3>
+<p>Each of the option areas can be expanded to show their details by clicking them. The various options are:</p>
+<ol>
+  <li>Show Splash Screen on start up. If this is enabled, the pcdMagic splash screen shows on every start. Note that clicking the splash screen hides it</li>
+  <li>Show only PCD files in Browser. If this is disabled, all files are shown in the File Browser window.</li>
+</ol>
+
+<h3>Output File Format</h3>
+<p>This allows you to select either JPEG or TIFF format. The default is JPEG.</p>
+
+<h3>Set Film Type</h3>
+<p>Normally pcdMagic autodetects film type, and sets the color profile to match. However, if this was incorrectly set at the time the image was scanned, you may be able to get more pleasing color by manually overriding this setting.</p>
+
+<h3>Set Scanner Model</h3>
+<p>The scanner model used to perform the original scan also effects color rendition. Normally pcdMagic autodetects scanner model, and sets the color profile to match. However, if this was incorrectly set at the time the image was scanned, you may be able to get more pleasing color by manually overriding this setting.</p>
+
+<h3>Get Help and Support</h3>
+<p>The help and support area allows you to:</p>
+<ul>
+  <li>Get information on the version number of pcdMagic for Windows</li>
+  <li>Enter your license code</li>
+  <li>Get support</li>
+</ul>
+
+
+<a name="develop-module"></a>
+<h3>Develop module</h3>
+
+<p>The Develop Window allows you to view individual images, and see the effect of making changes to the settings on the left hand side of the screen.</p>
+
+<p>pcdMagic automatically goes into the Develop Window if you either:</p>
+<ul>
+  <li>Drag-and-drop single file onto the pcdMagic window, or</li>
+  <li>Double-click a file in Windows Explorer to open it.</li>
+</ul>
+
+<!-- [Develop module screenshot was here] -->
+
+<h3>Moving around the Develop Window</h3>
+<p>You can find zoom controls under the View menu, or use the following keyboard shortcuts:</p>
+<ul>
+  <li>To zoom in, use the &lt;+&gt; key</li>
+  <li>To zoom out, use the &lt;-&gt; key</li>
+  <li>To zoom to 1:1, use the &lt;1&gt; key</li>
+  <li>To zoom to fit the entire image into the window, use the &lt;f&gt; key</li>
+</ul>
+<p>You can also use the context menu (right-click the image) to zoom. The context menu also allows you to:</p>
+<ul>
+  <li>Return to the start screen, or</li>
+  <li>Show the image's metadata. The metadata contains information such as film type, data scanned, scanner type, etc.</li>
+</ul>
+
+<h3>Setting the color profile</h3>
+<p>Normally the color profile is set automatically based on the metadata included into the image to match the film and scanner type. However, you can override the automatic setting by using the "Film Type" and "Scanner Model" selections on the left hand side of the screen.</p>
+
+<h3>Exporting to JPEG, TIFF</h3>
+<p>You don't need to take any action to export a converted file. As soon as any file is opened by pcdMagic, it is instantly converted to the format selected by the various settings on the left hand side of the screen. If you change any of the settings while image is displayed, the exported image is immediately updated on disk. The exported image can be found in the same directory as the original PCD image.</p>
+
+<h3>Viewing image metadata</h3>
+<p>You can view all image metadata by right-clicking the image, and selecting "Properties".</p>
+
+
+<a name="batch-mode"></a>
+<h3>Batch mode</h3>
+
+<p>Batch conversions are really easy using pcdMagic for Windows. All you need to do is drag-and-drop either a directory containing PCD files, or a selection containing multiple files onto the pcdMagic window. pcdMagic then automatically goes into batch mode, and will process each file individually, showing the results on the screen shown below.</p>
+
+<!-- [Batch mode screenshot was here] -->
+
+<h3>Important notes on batch conversions</h3>
+<ol>
+  <li>Whatever the settings you have selected on the left hand side of screen apply to all files converted.</li>
+  <li>If you drop a directory onto pcdMagic, pcdMagic only looks for files with a ".pcd" or ".PCD" extension. In addition pcdMagic doesn't look in sub-directories.</li>
+</ol>
+
+
+<a name="64base-images-windows"></a>
+<h3>64Base images</h3>
+
+<p>64Base images consist of multiple files - a base image, and a set of image extension files.</p>
+
+<p>For pcdMagic to convert 64Base files, three things have to occur:</p>
+<ol>
+  <li>You must specify 64Base as the resolution to load in "Image Size" in the Options Area. Note that the default setting for pcdMagic is to load only 16Base images, so as to avoid time consuming searches for image extension files.</li>
+  <li>The directory structure must be the same as for the original CD. 64Base images consist of a 16Base PCD file and a number of image extension files. pcdMagic will only be able to find the extension files if the file structure (the relative locations) of the PCD file and the image extension files are the same as for the original Photo CD.</li>
+  <li>You must open the Base file in pcdMagic - it will then find the extension files.</li>
+</ol>
+
+<h3>Directory Structure</h3>
+<p>The directory structure must look as follows (by way of example):</p>
+
+<!-- [Directory structure diagram was here] -->
+
+<p>The critical part is that the relationship between the base file (e.g., IMG0001.PCD, the file you will open) and the extension files (for IMG0001.PCD, the C1_0001.ICR, C2_0001.ICR, INFO.IC, Y0001.ICR and Y0001.ICR in the IPE\IMG0001\64BASE\ subdirectory) must be as shown above. The process that pcdMagic follows is reverse out from the location of the base file to the CD root directory (PHOTO_CD in this case), then find the extension files relative to that.</p>
+
+<p>pcdMagic is not sensitive to what the CD root directory (in this case the PHOTO_CD directory) is, but is sensitive to anything below that - the IMAGES and IPE subdirectory naming, and the names of any subdirectories and files in them.</p>
