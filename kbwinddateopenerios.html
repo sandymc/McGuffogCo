@@ -1,0 +1,188 @@
+---
+title: McGuffog&Company
+layout: kbLayout
+support: https://mcguffogco.freshdesk.com/solution/categories/8000043393
+---
+
+<!--
+  McGuffog&Company website, modified from the original Editorial theme by Editorial by HTML5 UP
+	Content (c) McGuffog&Company, design (c) the original creators
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<!-- Section -->
+
+	<h2>WinDat Opener for iOS</h2>
+
+
+<a name="how-do-i-buy-windat-opener"></a>
+<h3>How do I buy WinDat Opener?</h3>
+
+<p>WinDat Opener is available exclusively from the Apple app store.</p>
+
+
+<a name="will-windat-opener-convert-appointments-and-scheduling-information-in-winmail-dat-files"></a>
+<h3>Will WinDat Opener convert appointments and scheduling information in winmail.dat files?</h3>
+
+<p>WinDat Opener does convert to invitations in winmail.dat files. Be aware however that there are some restrictions. For example, Outlook can encode more complex appointment recurrence patterns than iCal can deal with. Also, if the attendees use Exchange server email address, Windat Opener has no way to convert these to regular internet "@" type email address. Finally, WinDat Opener can't convert "Time free/Time busy" requests. So, while WinDat Opener can convert the vast majority of basic appointments, it can't convert 100% of what might be in a winmail.dat file.</p>
+
+
+<a name="why-are-there-no-attachments-in-the-list"></a>
+<h3>Why are there no attachments in the list?</h3>
+
+<p>TNEF files don't just contain attachments - in fact, they contain the entire e-mail that was sent. So if, for example, an RTF formatted message was sent without an attachment, there will still be a winmail.dat file containing formatting information, etc, but it will not contain any attachments. WinDat Opener will open such a file, but as there are no attachments, the attachment list will be empty.</p>
+
+
+<a name="how-can-i-prevent-myself-from-receiving-tnef-files"></a>
+<h3>How can I prevent myself from receiving TNEF files?</h3>
+
+<p>You can't. Whether or not you are sent TNEF files depends entirely on the settings that the person that sends the message is using. You can contact the person in question, and ask them to change their settings.</p>
+
+<p>In general, two things must be true for a TNEF fle to be sent. Firstly, the sending e-mail program must believe that it is sending to a server that understands TNEF files. This typically occurs when, in Outlook, the properties of your e-mail address are set to "Send using Outlook rich text format" Secondly, the message format iself must be RTF or HTML. Note that the address property of "Outlook rich text format" is a propery of the e-mail address, NOT the message. The person that is sending the e-mail should ensure that both the "Send using..." property of your e-mail address and the format of the e-mail are BOTH non-RTF</p>
+
+
+<a name="the-time-stamps-on-the-attachments-are-out"></a>
+<h3>The time stamps on the attachments are out</h3>
+
+<p>WinDat Opener does its best to preserve the "Last modification" timestamp on any attachments that it saves. However, the TNEF format, which was created in the infancy of e-mail, does not not have a consistent way to store timezone information.</p>
+
+<p>Because of this timezone issue, the timestamp that WinDat Opener gives a file may be out to the extent that the timezone in which it was created is different to the local timezone, depending on which e-mail client sent the item, and the behavior of the servers that processed it.</p>
+
+<p>There is no workround for this issue; most TNEF decoders (including Microsoft's) do not preserve file timestamps at all, and simply use the current time.</p>
+
+
+<a name="email-is-not-configured-error-message"></a>
+<h3>"Email is not configured." Error message</h3>
+
+<p>In order to send email, you must have previously configured an email account. Do so, and try again.</p>
+
+
+<a name="there-was-a-problem-opening-the-file-error-message"></a>
+<h3>"There was a problem opening the file." Error message</h3>
+
+<p>There was a problem when WinDat Opener tried to open the file. Most probably, the file damaged.</p>
+
+
+<a name="that-was-not-a-tnef-format-file-error-message"></a>
+<h3>"That was not a TNEF format file." Error message</h3>
+
+<p>All TNEF files have a unique "file signature" that allows them to be recognised, but the file you tried to open doesn't have that signature. Either the file isn't a TNEF file, or it is corrupted.</p>
+
+
+<a name="quickstart-ios10"></a>
+<h3>Quickstart (iOS 10 or earlier)</h3>
+
+<p>Using WinDat Opener is easy - it follows all the usual iOS conventions. The diagram below provides a summary of operations.</p>
+
+<!-- [Quickstart operations diagram was here] -->
+
+
+<a name="opening-a-tnef-file"></a>
+<h3>Opening a TNEF file</h3>
+
+<p>TNEF files are opened from other Apps, typically Mail. The way to open a TNEF file depends on the App in question. In Mail, touching a winmail.dat file will bring up a menu of possible actions; once WinDat Opener is installed, one of those possible action will be to use WinDat Opener to open the file.</p>
+
+<p>Note that if you start WinDat Opener from the device's App screen without having previously opened a winmail.dat file, it will display an empty list.</p>
+
+<p>Once WinDat Opener has opened the file, it will display a list of attachments in the TNEF file. Note that not all TNEF files actually contain attachments - some contain only e-mail attributes such as font and formatting information. In such cases, the window will not contain any files.</p>
+
+<p>WinDat Opener keeps the extracted files available even if you switch away from WinDat Opener to another App - once you have done with the files, you can delete them, as discussed on this page.</p>
+
+
+<a name="selecting-files"></a>
+<h3>Selecting files</h3>
+
+<p>In order to action, email or get detailed information on a file, it must be selected. You select a file by touching it. When a file is selected, a tick mark will appear to the right of the file name</p>
+
+
+<a name="actioning-attachments"></a>
+<h3>Actioning attachments</h3>
+
+<p>In order to action attachments, you use the action button in the toolbar. WinDat Opener will then display a menu of possible actions. These may include:</p>
+<ul>
+  <li>The option to preview the file directly with WinDat Opener. WinDat Opener has the ability to preview many common file types, including spreadsheets, word processing and presentation formats.</li>
+  <li>The option to open the file in another App. If you have an App installed that can either view or edit the extracted file, the option to open the file in that App will appear.</li>
+</ul>
+<p>Note that if WinDat Opener doesn't have ability to preview the file and there is no other App that can view or open it, no menu will appear.</p>
+
+
+<a name="emailing-attachments-ios10"></a>
+<h3>Emailing attachments (iOS 10 or earlier)</h3>
+
+<p>You can email any extracted attachment directly from WinDat Opener. Do the following:</p>
+<ol>
+  <li>Select the files you want to email</li>
+  <li>Touch the email button on the tool bar</li>
+</ol>
+
+
+<a name="deleting-attachments"></a>
+<h3>Deleting attachments</h3>
+
+<p>WinDat Opener automatically saves extracted files in its own in-box. This avoid you having to reopen winmail.dat files if you leave WinDat Opener to edit a file in another application.</p>
+
+<p>Once you've done with a particular file, you can delete it:</p>
+<ol>
+  <li>Select the file</li>
+  <li>Touch the Trash button on the toolbar</li>
+</ol>
+
+
+<a name="emailing-attachements-ios11"></a>
+<h3>Emailing attachements (iOS 11 and later)</h3>
+
+<p>You can email extracted attachment directly from WinDat Opener. Do the following:</p>
+<ol>
+  <li>Open the file that contains the attachments.</li>
+  <li>Touch the email button on the tool bar:</li>
+</ol>
+
+		<span class="image main"><img src="{{ site.baseurl }}/assets/images/windatopnerios1.png" alt="" /></span>
+
+
+<a name="previewing-attachments"></a>
+<h3>Previewing attachments</h3>
+
+<p>To preview an attachment:</p>
+<ol>
+  <li>Open the file containing the attachment.</li>
+  <li>Touch on the attachment. if WinDat Opener can preview the file, it will open in a preview screen.</li>
+</ol>
+
+
+<a name="opening-attachments-in-other-apps"></a>
+<h3>Opening attachments in other Apps</h3>
+
+<p>You can open attachments in other Apps. Either:</p>
+<ol>
+  <li>Firstly, extract the attachment to WinDat Opener's local storage. From there, you can touch-and-hold on the attachment to open a menu of possible actions. NOTE: you may have to select "Share" to see the full list of possible Apps.</li>
+  <li>Alternatively, if your device supports drag-and-drop, you can simply drag the attachment to whichever App you'd like to open it with.</li>
+</ol>
+
+
+<a name="opening-winmail-dat-files"></a>
+<h3>Opening Winmail.dat files</h3>
+
+<p>You can open winmail.dat files in a number of ways:</p>
+<ol>
+  <li>In most apps, simply touch on the winmail.dat file. WinDat Opener will automatically be used to open it. If WinDat Opener doesn't automatically open, then it's probably that another app is set to automatically open any ".dat" file. In that case, either delete the other app from your device, or use one of the other ways to open the file.</li>
+  <li>Touch and hold on the winmail.dat file. You will see a list of options; if WinDat Opener isn't listed as a main option, it will be a sub-option, usually of the "Share" main option.</li>
+  <li>Use WinDat Opener's file manager screen to find the file that you want to open, and touch on it. Note that the file will only be visible if the location containing the file is file manager enabled.</li>
+  <li>Drag-and-drop the winmail.dat file onto WinDat Opener. Note that not all devices support drag-and-drop.</li>
+</ol>
+
+
+<a name="extracting-attachments"></a>
+<h3>Extracting attachments</h3>
+
+<p>You can extract all the attachments in a winmail.dat file:</p>
+<ol>
+  <li>Open the winmail.dat file</li>
+  <li>Touch on the "Extract all" button:</li>
+</ol>
+
+		<span class="image main"><img src="{{ site.baseurl }}/assets/images/windatopnerios2.png" alt="" /></span>
+
+<p>You will be given the choice of either extracting the files to the same location as the original winmail.dat file, or to WinDat Opener's local storage.</p>
