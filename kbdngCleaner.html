@@ -1,0 +1,78 @@
+---
+title: McGuffog&Company
+layout: kbLayout
+support: 
+---
+
+<!--
+  McGuffog&Company website, modified from the original Editorial theme by Editorial by HTML5 UP
+	Content (c) McGuffog&Company, design (c) the original creators
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<!-- Section -->
+<section>
+	<h2>DNG Cleaner</h2>
+</section>
+
+<section>
+
+
+<a name="what-if-a-file-already-exists"></a>
+<h3>What if a file already exists?</h3>
+
+<p>If a file already exists, then you can select whether to:</p>
+<ul>
+  <li>Overwrite the file,</li>
+  <li>Skip the file,</li>
+  <li>Create a file with a new name, or</li>
+  <li>Stop the entire operation.</li>
+</ul>
+<p>Note that we strong recommend that you do not overwrite your original files.</p>
+
+
+<a name="what-does-dng-cleaner-do"></a>
+<h3>What does DNG Cleaner do?</h3>
+
+<p>When you clean a DNG file, DNG cleaner takes the following steps:</p>
+<ol>
+  <li>Removes any XMP information, including Lightroom/ACR settings.</li>
+  <li>Removes any Lightroom/ACR profile information. (AKA non-embedded profiles).</li>
+  <li>Optionally removes any opcodes.</li>
+  <li>Deletes any existing preview images, and regenerates a "standard" set.</li>
+  <li>Optionally compresses the image data.</li>
+  <li>Optionally attempts to repair the file. This is intended for DNG files that are no longer readable - very often giving an "Unexpected end of file" error.</li>
+</ol>
+
+
+<a name="remove-lens-corrections-from-any-raw-image"></a>
+<h3>Remove lens corrections from any raw image</h3>
+
+<p>Many cameras embed lens corrections into raw the raw files that they produce. Generally, that's a good thing - straight lines stay straight, etc. For an example of lens corrections in practice, take a look at this <a href="http://chromasoft.blogspot.com/2015/10/how-much-lens-correction-is-there-on.html">post about the Leica SL</a>.</p>
+
+<p>But, as the saying goes, "there is no free lunch". Lens corrections also have some downsides:</p>
+<ul>
+  <li>Lens corrections result in a small reduction in sharpness. Sean Reid, at Reid Reviews has done extensive testing on this as part of his various lens reviews, and his conclusions are clear - there is a measurable loss in sharpness.</li>
+  <li>Lens corrections result in some reduction in image size - the corrections inevitably result in the edges of the image curving, and the curved parts need to be trimmed off to get back to a straight edge.</li>
+</ul>
+
+<p>So sometimes, it's useful to be able to get an uncorrected image. Now there are some raw developer apps that allow you get to uncorrected images (AccuRaw EXR is one of them), but most mainstream apps such as Lightroom and Photoshop don't allow correction to be disabled.</p>
+
+<p>Fortunately though, there is a "simple trick" that will allow you to disable lens corrections for nearly any camera that produces raw images. What you need to do is a simple two step process:</p>
+<ol>
+  <li>Firstly, convert the raw image to a DNG image, using Adobe's DNG converter.</li>
+  <li>Then use DNG Cleaner (macOS only) to remove any opcodes.</li>
+</ol>
+
+<p>The resulting DNG will not have any lens correction, and you can load it into Lightroom, Photoshop, or any other app that supports DNGs.</p>
+
+<p><strong>Why does this work?</strong> This works because whenever DNG Converter converts an image that needs lens correction, it embeds the required correction as an "opcode" into the DNG image. Lens correction opcodes as usually things like "WarpRectilinear". DNG Cleaner knows where to find these opcodes, and simply removes them, as long as you have the "Remove opcodes" checkbox selected.</p>
+
+		<span class="image main"><img src="{{ site.baseurl }}/assets/images/dngCleaner1.jpeg" alt="" /></span>
+
+<p>Note that in order for this to work, you need DNG converter to be using it's default settings. Specifically, Compatibility should be set to the most recent version of Camera Raw. You should definitely not be using Custom Settings with the "Linear" checkbox selected. "Linear", otherwise known as LinearRaw, bakes any corrections into the actual data in the DNG, making it impossible to remove.</p>
+
+
+</section>

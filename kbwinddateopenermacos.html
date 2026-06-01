@@ -1,0 +1,133 @@
+---
+title: McGuffog&Company
+layout: kbLayout
+support: 
+---
+
+<!--
+  McGuffog&Company website, modified from the original Editorial theme by Editorial by HTML5 UP
+	Content (c) McGuffog&Company, design (c) the original creators
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<!-- Section -->
+
+	<h3>WinDat Opener for macOS</h3>
+
+
+<a name="how-do-i-buy-windat-opener-macos"></a>
+<h3>How do I buy WinDat Opener?</h3>
+
+<p>WinDat Opener is available exclusively from the Apple app store.</p>
+
+
+<a name="will-windat-opener-convert-appointments-and-scheduling-information-in-winmail-dat-files-macos"></a>
+<h3>Will WinDat Opener convert appointments and scheduling information in winmail.dat files?</h3>
+
+<p>WinDat Opener does convert to invitations in winmail.dat files. Be aware however that there are some restrictions. For example, Outlook can encode more complex appointment recurrence patterns than iCal can deal with. Also, if the attendees use Exchange server email address, Windat Opener has no way to convert these to regular internet "@" type email address. Finally, WinDat Opener can't convert "Time free/Time busy" requests. So, while WinDat Opener can convert the vast majority of basic appointments, it can't convert 100% of what might be in a winmail.dat file.</p>
+
+
+<a name="why-are-there-no-attachments-in-the-list-macos"></a>
+<h3>Why are there no attachments in the list?</h3>
+
+<p>TNEF files don't just contain attachments - in fact, they contain the entire e-mail that was sent. So if, for example, an RTF formatted message was sent without an attachment, there will still be a winmail.dat file containing formatting information, etc, but it will not contain any attachments. WinDat Opener will open such a file, but as there are no attachments, the attachment list will be empty.</p>
+
+
+<a name="how-can-i-prevent-myself-from-receiving-tnef-files-macos"></a>
+<h3>How can I prevent myself from receiving TNEF files?</h3>
+
+<p>You can't. Whether or not you are sent TNEF files depends entirely on the settings that the person that sends the message is using. You can contact the person in question, and ask them to change their settings.</p>
+
+<p>In general, two things must be true for a TNEF fle to be sent. Firstly, the sending e-mail program must believe that it is sending to a server that understands TNEF files. This typically occurs when, in Outlook, the properties of your e-mail address are set to "Send using Outlook rich text format" Secondly, the message format iself must be RTF or HTML. Note that the address property of "Outlook rich text format" is a propery of the e-mail address, NOT the message. The person that is sending the e-mail should ensure that both the "Send using..." property of your e-mail address and the format of the e-mail are BOTH non-RTF</p>
+
+
+<a name="i-try-to-open-a-decoded-attachment-but-nothing-happens"></a>
+<h3>I try to open a decoded attachment but nothing happens?</h3>
+
+<p>If you try to open a decoded attachment, either by double-clicking or from the context menu, and nothing happens, then no default application is defined for that type of file. First copy the file to somewhere convenient, such as the desktop, then select the file (in Finder) and select the Get Info option. Then under "Open With", select whatever application you'd like to use as a default, and click "Change All". In future, that application will be used to open all files of the type you selected.</p>
+
+
+<a name="the-time-stamps-on-the-attachments-are-out-macos"></a>
+<h3>The time stamps on the attachments are out</h3>
+
+<p>WinDat Opener does its best to preserve the "Last modification" timestamp on any attachments that it saves. However, the TNEF format, which was created in the infancy of e-mail, does not not have a consistent way to store timezone information.</p>
+
+<p>Because of this timezone issue, the timestamp that WinDat Opener gives a file may be out to the extent that the timezone in which it was created is different to the local timezone, depending on which e-mail client sent the item, and the behavior of the servers that processed it.</p>
+
+<p>There is no workaround for this issue; most TNEF decoders (including Microsoft's) do not preserve file timestamps at all, and simply use the current time.</p>
+
+
+<a name="windat-opener-could-not-create-a-temporary-directory-error-message"></a>
+<h3>"WinDat Opener could not create a temporary directory - may be a permissions problem." Error message</h3>
+
+<p>When it opens a TNEF file, WinDat Opener creates a temporary directory in order to store attachments. This error message means that the directory couldn't be created. Try running Disk Utility and repairing disk permissions.</p>
+
+
+<a name="windat-opener-could-not-open-the-file-error-message"></a>
+<h3>"WinDat Opener could not open the file - may be a permissions problem." Error message</h3>
+
+<p>There was a problem when WinDat Opener tried to open the file. Most probably, you don't have permission to read the file. Check the file permissions, and try again.</p>
+
+
+<a name="that-was-not-a-tnef-format-file-error-message-macos"></a>
+<h3>"That was not a TNEF format file." Error message</h3>
+
+<p>All TNEF files have a unique "file signature" that allows them to be recognised, but the file you tried to open doesn't have that signature. Either the file isn't a TNEF file, or it is corrupted.</p>
+
+
+<a name="windat-opener-could-not-obtain-path-information-error-message"></a>
+<h3>"WinDat Opener could not obtain path information." Error message</h3>
+
+<p>WinDat Opener couldn't access the location you specified. It might be a URL, or other non-file location.</p>
+
+
+<a name="windat-opener-could-not-resolve-the-file-location-error-message"></a>
+<h3>"WinDat Opener could not resolve the file location." Error message</h3>
+
+<p>WinDat Opener couldn't access the location you specified. Most probably, you don't have permission to read the file or device. Check the file permissions, and try again.</p>
+
+
+<a name="could-not-save-file-error-message"></a>
+<h3>"Could not save file." Error message</h3>
+
+<p>There was a problem when WinDat Opener tried to save the file. Most probably, you don't have permission to write to that location. Check the file or directory permissions, and try again.</p>
+
+
+<a name="could-not-access-decoded-file-in-temporary-directory-error-message"></a>
+<h3>"Could not access decoded file in temporary directory." Error message</h3>
+
+<p>When it opens a TNEF file, WinDat Opener creates a temporary directory in order to store attachments. This error message means that the directory couldn't be accessed after it was created. Try running Disk Utility and repairing disk permissions.</p>
+
+
+<a name="when-all-else-fails"></a>
+<h3>When all else fails.....</h3>
+
+<p>If WinDat Opener gets completely confused, it will output diagnostic/error messages to the Console. These messages may help you to find the root cause of the problem. Start the Console application, and repeat whatever steps led to the problem</p>
+
+
+<a name="opening-a-tnef-file-macos"></a>
+<h3>Opening a TNEF file</h3>
+
+<p>There are three different ways that you can open TNEF files for decoding. Note that when WinDat Opener starts, it doesn't display a blank window - a WinDat Opener window will open only one you open a file.</p>
+<ol>
+  <li><strong>Drag and drop</strong>. Simply start WinDat Opener, and then drag and drop the file that you want to decode onto the WinDat Opener icon in the Dock. For example, if you receive winmail.dat file as part of an e-mail, just drag the file from your e-mail application and drop it the WinDat Opener icon.</li>
+  <li><strong>Open from the File menu</strong>. You can open a TNEF file from the "Open..." menu item under WinDat Opener's File menu.</li>
+  <li><strong>Cntrl-Click or right click</strong>. WinDat Opener registers itself as able to open .DAT files when you first run it. Once the registration process in complete, you can open a .DAT file by right-clicking, or cntrl-clicking the file, then selecting either "Open" or "Open With".</li>
+</ol>
+
+<p>Once WinDat Opener has opened the file, it will display a list of attachments in the TNEF file. Note that not all TNEF files actually contain attachments - some contain only e-mail attributes such as font and formatting information. In such cases, the window will not contain any files.</p>
+
+
+<a name="saving-decoded-attachments"></a>
+<h3>Saving decoded attachments</h3>
+
+<p>Once WinDat Opener has opened a TNEF file, it displays a window with a list of the attachments in the TNEF file, together with their size and date. You can either open the attachments directly, or save them to another location.There are two ways to open attachments directly, and three different ways that you can save these attachments.</p>
+<ol>
+  <li><strong>Save by Drag and drop</strong>. Simply drag the attachment to wherever you want it.</li>
+  <li><strong>Save from the File menu</strong>. You can save an attachment from the "Save As..." menu item under WinDat Opener's File menu. First select the attachment by clicking on it, then select the "Save As..." item in the File menu. Note that for the "Save As..." item to be enabled a single file must be selected. If no file or more than one file is selected, it will be disabled.</li>
+  <li><strong>Save by Cntrl-Click or right click</strong>. Right-clicking, or cntrl-clicking on an attachment shown in the WinDat Opener window will bring up the context menu. Select the "Save As..." menu option. This will bring up a File Save dialog.</li>
+  <li><strong>Open by Cntrl-Click or right click</strong>. Right-clicking, or cntrl-clicking on an attachment shown in the WinDat Opener window will bring up the context menu. You can than select the "Open" menu item. The item will then be opened using using the default application for that attachment. Note that if you edit an attachment that you opened in this way, you must save it to another location in the application that you used to edit it. If you don't do this, you will lose any edits you made as soon as WinDat Opener exits.</li>
+  <li><strong>Open by Double-clicking</strong>. To open an attachment using the default application for that attachment, double-click on the attachment. Note that if you edit an attachment that you opened in this way, you must save it to another location in the application that you used to edit it. If you don't do this, you will lose any edits you made as soon as WinDat Opener exits.</li>
+</ol>
